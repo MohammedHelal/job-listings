@@ -74,6 +74,11 @@ p {
   font-weight: 700;
   line-height: 1;
   color: var(--color-very-dark-grayish-cyan);
+  cursor: pointer;
+}
+
+.company-job-info > h3:hover {
+  color: var(--color-desaturated-dark-cyan);
 }
 
 .company-msc {
