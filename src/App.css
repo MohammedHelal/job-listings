@@ -1,0 +1,10 @@
+#background-image {
+  width: 100vw;
+  height: 150px;
+  background-image: url("../images/bg-header-desktop.svg");
+  background-size: 100vw 150px;
+  background-repeat: no-repeat;
+  background-color: var(--color-desaturated-dark-cyan);
+  position: absolute;
+  z-index: -10;
+}

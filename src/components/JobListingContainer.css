@@ -1,0 +1,75 @@
+section {
+  width: 80vw;
+  margin: 0 auto;
+  padding-top: 125px;
+}
+
+.filter-bar {
+  width: 100%;
+  min-height: 52.5px;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-items: space-between;
+  flex-wrap: wrap;
+}
+
+.invisible {
+  visibility: hidden;
+}
+
+.filter-bar > div {
+  display: flex;
+  align-items: center;
+  justify-items: flex-start;
+  flex-wrap: wrap;
+  width: 80%;
+}
+
+.filter-bar > div > div {
+  width: fit-content;
+  margin: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.filter {
+  background-color: var(--color-light-grayish-cyan);
+  border: 0;
+  color: var(--color-desaturated-dark-cyan);
+  padding: 5px 10px;
+  font-size: 15px;
+}
+
+.filter-bar > div > div > button {
+  padding: 7px;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  color: white;
+  background-color: var(--color-desaturated-dark-cyan);
+  border: 0;
+}
+
+.filter-bar > div > button:hover {
+  background-color: var(--color-very-dark-grayish-cyan);
+}
+
+.clear {
+  margin-left: auto;
+  margin-right: 20px;
+  text-decoration: underline;
+  cursor: pointer;
+  color: var(--color-desaturated-dark-cyan);
+}
+
+.clear:hover {
+  font-weight: 700;
+}
+
+@media screen and (max-width: 680px) {
+  section {
+    width: 90vw;
+    margin: 0 auto;
+  }
+}
