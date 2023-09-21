@@ -64,14 +64,14 @@ function JobListingContainer() {
   //using filter method on the json data to filter the items based on the selected
   let filteredList = isfilterItems
     ? data.filter((ele) => {
-        //boolean variable to store the ovrall boolean value
-        let bool;
+        //boolean variable to store the ovrall boolean values
+        let bool = [];
         //checked on the landuages
         if (filterItems.languages.length > 0) {
           for (let i of filterItems.languages) {
             if (ele.languages.indexOf(i) === -1) return false;
           }
-          bool = true;
+          bool.push(true);
         }
 
         //checked on the tools
@@ -79,20 +79,20 @@ function JobListingContainer() {
           for (let i of filterItems.tools) {
             if (ele.tools.indexOf(i) === -1) return false;
           }
-          bool = true;
+          bool.push(true);
         }
 
-        //checking the role
-        if (filterItems.role) {
-          bool = ele.role === filterItems.role;
+        if (filterItems.role && filterItems.level) {
+          bool.push(
+            ele.role === filterItems.role && ele.level === filterItems.level
+          );
+        } else if (filterItems.role) {
+          bool.push(ele.role === filterItems.role);
+        } else if (filterItems.level) {
+          bool.push(ele.level === filterItems.level);
         }
 
-        //checking the level
-        if (filterItems.level) {
-          bool = ele.level === filterItems.level;
-        }
-
-        return bool;
+        return bool.indexOf(false) === -1;
       })
     : data;
 
