@@ -99,7 +99,13 @@ p {
   padding: 5px 10px;
   background-color: var(--color-light-grayish-cyan);
   color: var(--color-desaturated-dark-cyan);
+  border-radius: 5px;
   cursor: pointer;
+}
+
+.filters > *:hover {
+  background-color: var(--color-desaturated-dark-cyan);
+  color: white;
 }
 
 @media screen and (max-width: 680px) {
